@@ -228,6 +228,67 @@ footer p i {
 	color: pink;
 }
 
+
+
+/* Responsive */
+@media (max-width: 600px) {
+	.overlay img{
+		width: 400px;
+		height: 316px;
+	}
+
+
+	.prev, .next {
+		height: 70px;
+		width: 70px;
+		position: absolute;
+		text-indent: -9999px;
+		opacity: 0;
+		}
+		
+		.prev {
+			background-image: url(../img/kiri.png);
+			bottom: 130px;
+			margin-left: -460px;
+		}
+		.next {
+			background-image: url(../img/kanan.png);
+			bottom: 130px;
+		}
+	
+		.overlay:target .prev,
+		.overlay:target .next {
+			animation: fadeaja .5s .5s forwards
+		}
+
+
+		.overlay .close {
+			position: absolute;
+			bottom: -50px;
+			left: 43%;
+			width: 100px;
+			height: 30px;
+			background-color: white;
+			border-radius: 10px;
+			line-height: 30px;
+			font-size: 14px;
+			opacity: 0;
+		}
+		
+		.overlay:target .close {
+			animation:slideup 1s 2s forwards;
+		}
+
+
+
+} 
+/* Akhir Responsive */
+
+
+
+
+
+
 /*animation*/
 @keyframes slideup {
 	0% {
