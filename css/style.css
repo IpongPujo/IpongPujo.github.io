@@ -1,0 +1,255 @@
+
+html {
+	position: relative;
+}
+
+body {
+	margin-bottom: 120px;
+	margin-top: 50px;
+}
+
+.jumbotron	{
+	background-color: #3b4453; 
+	background-image: url(../img/lamp-bg.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 0 -200px;
+	overflow: hidden;
+}
+
+.jumbotron img {
+	width: 200px;
+	box-shadow: 0 0 10px 5px skyblue;
+}
+
+.jumbotron h1 {
+	color: white;
+	text-shadow: 0px 0px 5px black;
+}
+
+.jumbotron p {
+	color: #fdd700;
+	text-shadow: 4px 4px 5px black;
+}
+
+hr {
+	width: 250px;
+	border-top: 4px solid darkgray;
+}
+
+/*animasi tombol kanan kiri */
+.hpkiri, .hpkanan{
+	text-indent: 0px;
+}
+
+.pkiri, .pkanan {
+	text-align: justify;
+	text-indent: 50px;
+	opacity: 0;
+	transform: translate(-50px, 0);
+	transition: 1s;
+}
+
+.pkanan {
+	transform: translate(50px, 0);
+}
+
+.pkiri.pmuncul, .pkanan.pmuncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/* animasi tombol kanan kiri */
+
+
+
+
+
+section {
+	min-height: 300px;
+}
+
+
+.portfolio {
+	background-color: #3b4453;
+	color: white;
+}
+
+.portfolio .thumbnail {
+	opacity: 0;
+	transform: translate(0, -40px);
+	transition: .5s
+}
+
+.portfolio .thumbnail.muncul {
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/* ---------------------------------------------------*/
+
+
+
+.back, .continue {
+	background-image: url(../img/kiri.png);
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	text-indent: -9999px;
+}
+
+.back {
+	bottom: 1050px;
+	margin-left: -1250px;
+}
+
+
+.continue {
+	background-image: url(../img/kanan.png);
+	bottom: 1050px;
+}
+
+
+
+
+/* Akhir next container */
+
+
+
+
+
+/* Akhir Overlay Container */
+
+
+
+
+
+
+
+/* ---------------------------------------------- */
+/*overlay*/
+.overlay {
+	width: 0px;
+	height: 0px;
+	top:0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0);
+	overflow: hidden;
+	position: fixed;
+	z-index: 9999;
+	transition: 1s;
+	text-align: center;
+	padding: 100px 0;
+}
+.overlay .parent {
+	position: relative;
+	text-align: center;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.8);
+}
+
+.overlay img {
+	height: 633px;
+	width: 800px;
+	margin-top: 30px;
+	max-height: 100%;
+	box-shadow: 0px 0px 20px 5px rgba(141, 232, 240,.8);
+} 
+
+.overlay .close {
+	position: absolute;
+	bottom: -50px;
+	left: 46%;
+	width: 100px;
+	height: 30px;
+	background-color: white;
+	border-radius: 10px;
+	line-height: 30px;
+	font-size: 14px;
+	opacity: 0;
+}
+
+.overlay:target .close {
+	animation:slideup 1s 2s forwards;
+}
+
+	/*next prev*/
+	.prev, .next {
+	background-image: url(../img/kiri.png);
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	text-indent: -9999px;
+	opacity: 0;
+	}
+	
+	.prev {
+		bottom: 281px;
+		margin-left: -868px;
+	}
+	.next {
+		background-image: url(../img/kanan.png);
+		bottom: 281px;
+	}
+
+	.overlay:target .prev,
+	.overlay:target .next {
+		animation: fadeaja .5s .5s forwards
+	}
+	/*akhir next prev*/
+
+/*akhir overlay*/
+
+.contact {
+	min-height: 900px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #3b4453;
+}
+
+footer p {
+	color: white;
+	font-size: 12px;
+ 	padding-top: 30px;
+}
+
+footer p i {
+	color: pink;
+}
+
+/*animation*/
+@keyframes slideup {
+	0% {
+		opacity: 0;
+		bottom: -100px;
+	}
+	100% {
+		opacity: 1;
+		bottom: -50px;
+	}
+}
+
+@keyframes fadeaja {
+	0% {
+		opacity: 0;
+		transform: translate(0);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(1);
+	}
+
+}
+/*akhir animation*/
