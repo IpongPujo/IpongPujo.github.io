@@ -231,7 +231,7 @@ footer p i {
 
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 	.overlay img{
 		width: 400px;
 		height: 316px;
