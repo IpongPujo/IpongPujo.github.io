@@ -248,12 +248,13 @@ footer p i {
 		
 		.prev {
 			background-image: url(../img/kiri.png);
-			bottom: 130px;
-			margin-left: -460px;
+			bottom: -80px;
+			margin-left: -340px;
 		}
 		.next {
 			background-image: url(../img/kanan.png);
-			bottom: 130px;
+			bottom: -80px;
+			margin-left: -110px;
 		}
 	
 		.overlay:target .prev,
@@ -264,8 +265,9 @@ footer p i {
 
 		.overlay .close {
 			position: absolute;
-			bottom: -50px;
-			left: 43%;
+			margin-bottom: -7px;
+			margin-top: -20px;
+			left: 41%;
 			width: 100px;
 			height: 30px;
 			background-color: white;
