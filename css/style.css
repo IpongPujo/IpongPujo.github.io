@@ -228,6 +228,11 @@ footer p i {
 	color: pink;
 }
 
+.btn-loading, .alert {
+	display: none;
+}
+
+
 
 
 /* Responsive */

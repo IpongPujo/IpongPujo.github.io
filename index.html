@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -396,6 +397,15 @@
 
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
+
+
+              <div class="alert alert-success alert-dismissible d-hilang my-alert" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Terima kasih!</strong> Pesan anda telah terkirim.
+              </div>
+
+
+
               <form name="portfolio-IpongPujoN">
 
                 <div class="form-group">
@@ -425,7 +435,9 @@
                   <textarea cols="20" rows="5" class="form-contorl" placeholder="Masukan pesan" name="Pesan"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Kirim</button>
+                <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+                <button type="button" class="btn btn-success btn-loading d-hilang">Success</button>
 
               </form>
             </div>
@@ -469,11 +481,30 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbz9GNK3OCwDKrZmLfrzSOz7NApeaBorG_4OxrvngDYovwc0S0pyrL26wJ9R9OWQ3tQccQ/exec'
       const form = document.forms['portfolio-IpongPujoN']
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
     
       form.addEventListener('submit', e => {
         e.preventDefault()
+        // ketika tombol submit di klik
+        // tampilkan tombol laoding, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-hilang');
+        btnKirim.classList.toggle('d-hilang');
+
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle('d-hilang');
+            btnKirim.classList.toggle('d-hilang');
+            // Tampilkan Alert
+            myAlert.classList.toggle('d-hilang');
+            // Reset Form
+            form.reset();
+
+            console.log('Success!', response)
+          })
           .catch(error => console.error('Error!', error.message))
       })
     </script>
