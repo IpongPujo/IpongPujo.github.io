@@ -10,7 +10,7 @@ body {
 
 .jumbotron	{
 	background-color: #3b4453; 
-	background-image: url(../img/lamp-bg.png);
+	background-image: url(../img/jumbotronBanner.png);
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: 0 -200px;
