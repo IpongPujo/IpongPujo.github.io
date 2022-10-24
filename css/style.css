@@ -10,11 +10,12 @@ body {
 
 .jumbotron	{
 	background-color: #3b4453; 
-	background-image: url(../img/jumbotronBanner.png);
+	background-image: url(../img/lamp-bg.png);
 	background-attachment: fixed;
-	background-size: cover;
-	background-position: 0 -200px;
+	background-size: 1000px;
+	background-position: 40px -400px;
 	overflow: hidden;
+
 }
 
 .jumbotron img {
@@ -242,6 +243,7 @@ footer p i {
 		height: 316px;
 	}
 
+	
 
 	.prev, .next {
 		height: 70px;
